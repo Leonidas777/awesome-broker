@@ -211,6 +211,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   envyable
   kaminari
+  nokogiri
   pg
   pry-rails
   puma (~> 3.11)

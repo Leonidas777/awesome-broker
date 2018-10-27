@@ -13,6 +13,7 @@ gem 'slim'
 
 gem 'envyable', require: 'envyable/rails-now'
 gem 'kaminari'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'pry-rails'
