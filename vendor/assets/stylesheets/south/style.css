@@ -1568,6 +1568,9 @@ img {
   .pagination .page-link:focus, .pagination .page-link:hover {
     color: #ffffff;
     background-color: #000000; }
+.pagination .page-nav{
+  width: 45px;
+}
 
 .comments-area h5 {
   margin-bottom: 50px; }

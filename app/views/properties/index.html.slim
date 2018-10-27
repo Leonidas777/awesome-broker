@@ -1,6 +1,11 @@
 section.listings-content-wrapper.section-padding-100
   .container
     .row
+      .col-12
+        .south-pagination.d-flex.justify-content-end
+          = paginate @properties
+
+    .row
       - if @properties.any?
         - @properties.each do |property|
           .col-12.col-md-6.col-xl-4
@@ -29,3 +34,8 @@ section.listings-content-wrapper.section-padding-100
                   .space
                     = image_tag 'south/icons/space.png'
                     span 120 sq ft
+
+    .row
+      .col-12
+        .south-pagination.d-flex.justify-content-end
+          = paginate @properties
