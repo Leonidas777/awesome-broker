@@ -12,6 +12,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'slim'
 
 gem 'envyable', require: 'envyable/rails-now'
+gem 'kaminari'
 
 group :development, :test do
   gem 'pry-rails'

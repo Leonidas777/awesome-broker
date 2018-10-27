@@ -7,5 +7,6 @@ h1 List of properties published
         h2= property.name
         = image_tag(property.preview_url) if property.preview_url.present?
         p= property.description
+    = paginate @properties
   - else
     span Sorry, but there is no property
