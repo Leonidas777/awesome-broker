@@ -1,0 +1,11 @@
+h1 List of properties published
+
+.property-list
+  - if @properties.any?
+    - @properties.each do |property|
+      .property
+        h2= property.name
+        = image_tag(property.preview_url) if property.preview_url.present?
+        p= property.description
+  - else
+    span Sorry, but there is no property
