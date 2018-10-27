@@ -1,12 +1,31 @@
-h1 List of properties published
-
-.property-list
-  - if @properties.any?
-    - @properties.each do |property|
-      .property
-        h2= property.name
-        = image_tag(property.preview_url) if property.preview_url.present?
-        p= property.description
-    = paginate @properties
-  - else
-    span Sorry, but there is no property
+section.listings-content-wrapper.section-padding-100
+  .container
+    .row
+      - if @properties.any?
+        - @properties.each do |property|
+          .col-12.col-md-6.col-xl-4
+            .single-featured-property.mb-50
+              .property-thumb
+                = image_tag 'south/bg-img/feature1.jpg'
+                .tag
+                  span For Sale
+                .list-price
+                  p $945 679
+              .property-content
+                h5= property.name
+                p.location
+                  = image_tag 'south/icons/location.png'
+                  | Upper Road 3411, no.34 CA
+                p=  property.description
+                .property-meta-data.d-flex.align-items-end.justify-content-between
+                  .new-tag
+                    = image_tag 'south/icons/new.png'
+                  .bathroom
+                    = image_tag 'south/icons/bathtub.png'
+                    span 2
+                  .garage
+                    = image_tag 'south/icons/garage.png'
+                    span 2
+                  .space
+                    = image_tag 'south/icons/space.png'
+                    span 120 sq ft

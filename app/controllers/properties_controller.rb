@@ -1,7 +1,7 @@
 class PropertiesController < ApplicationController
-  layout 'main'
+  layout 'south'
 
   def index
-    @properties = Property.published.page(params[:page]).per(10)
+    @properties = Property.published.page(params[:page]).per(9)
   end
 end

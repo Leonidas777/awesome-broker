@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 (1..100).each do |index|
-  Property.create(name: "Property #{index}", description: "This is my property #{index}", published: true)
+  Property.create(name: "Villa in Los Angeles #{index}", description: 'Integer nec bibendum lacus. Suspendisse dictum enim sit amet libero malesuada.', published: true)
 end

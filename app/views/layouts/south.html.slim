@@ -1,0 +1,28 @@
+doctype html
+html lang="en"
+  head
+    meta charset="UTF-8"
+    meta content="" name="description"
+    meta content="IE=edge" http-equiv="X-UA-Compatible"
+    meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"
+    title South - Real Estate Agency Template | Listings
+    link href="img/core-img/favicon.ico" rel="icon"
+
+    = stylesheet_link_tag 'main', media: 'all'
+    = javascript_include_tag 'main'
+
+  body
+    header.header-area
+      .top-header-area
+        .h-100.d-md-flex.justify-content-between.align-items-center
+
+    section.breadcumb-area.bg-img style=("background-image: url(#{asset_url('south/bg-img/hero1.jpg')});")
+      .container.h-100
+        .row.h-100.align-items-center
+          .col-12
+            .breadcumb-content
+              h3.breadcumb-title Properties
+
+    = yield
+
+    footer.footer-area.section-padding-100-0.bg-img.gradient-background-overlay
