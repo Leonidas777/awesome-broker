@@ -20,7 +20,8 @@ class DBRebuilder
   private
 
   def unpublish_irrelevant(sync_start_time, provider)
-    Property.where('synchronized_at < ? AND provider = ?', sync_start_time, provider).update_all(published: false)
+    Property.where('(synchronized_at < ? OR synchronized_at IS NULL) AND provider = ?', sync_start_time, provider)
+      .update_all(published: false)
   end
 end
 

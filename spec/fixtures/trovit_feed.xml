@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trovit>
+  <ad>
+    <property_type><![CDATA[Casa]]></property_type>
+    <id><![CDATA[1483s]]></id>
+    <url><![CDATA[https://www.stagingeb.com/mx/inmueble/custom-property-type?utm_source=Trovit]]></url>
+    <title><![CDATA[Custom Property Type]]></title>
+    <content><![CDATA[EasyBroker ID: 1483. Casa en México, Cuauhtemoc, Hipódromo Condesa. Custom Property Type]]></content>
+    <type><![CDATA[For sale]]></type>
+    <agency><![CDATA[Real Estate Rockstars]]></agency>
+    <price currency="USD"><![CDATA[5990000.0]]></price>
+    <floor_area unit="meters"><![CDATA[3]]></floor_area>
+    <rooms><![CDATA[2]]></rooms>
+    <bathrooms><![CDATA[1]]></bathrooms>
+    <city><![CDATA[Cuauhtémoc]]></city>
+    <city_area><![CDATA[Hipódromo Condesa]]></city_area>
+    <region><![CDATA[Ciudad de México]]></region>
+    <longitude><![CDATA[-99.1495107]]></longitude>
+    <latitude><![CDATA[19.4356338]]></latitude>
+    <pictures>
+      <picture>
+        <picture_url><![CDATA[http://s3.amazonaws.com/assets.stagingmg.com/property_images/1483/2969/living.jpg]]></picture_url>
+      </picture>
+      <picture>
+        <picture_url><![CDATA[http://s3.amazonaws.com/assets.stagingmg.com/property_images/1483/2971/patio.jpg]]></picture_url>
+      </picture>
+      <picture>
+        <picture_url><![CDATA[http://s3.amazonaws.com/assets.stagingmg.com/property_images/1483/2967/kitchen.jpg]]></picture_url>
+      </picture>
+    </pictures>
+    <date><![CDATA[02/02/2017]]></date>
+    <time><![CDATA[22:13]]></time>
+  </ad>
+
+  <ad>
+    <property_type><![CDATA[Casa]]></property_type>
+    <id><![CDATA[1483r]]></id>
+    <url><![CDATA[https://www.stagingeb.com/mx/inmueble/custom-property-type?utm_source=Trovit]]></url>
+    <title><![CDATA[Custom Property Type]]></title>
+    <content><![CDATA[EasyBroker ID: 1483. Casa en México, Cuauhtemoc, Hipódromo Condesa. Custom Property Type]]></content>
+    <type><![CDATA[For rent]]></type>
+    <agency><![CDATA[Real Estate Rockstars]]></agency>
+    <price currency="USD"><![CDATA[20000.0]]></price>
+    <floor_area unit="meters"><![CDATA[3]]></floor_area>
+    <rooms><![CDATA[2]]></rooms>
+    <bathrooms><![CDATA[1]]></bathrooms>
+    <city><![CDATA[Cuauhtémoc]]></city>
+    <city_area><![CDATA[Hipódromo Condesa]]></city_area>
+    <region><![CDATA[Ciudad de México]]></region>
+    <longitude><![CDATA[-99.1495107]]></longitude>
+    <latitude><![CDATA[19.4356338]]></latitude>
+    <pictures>
+      <picture>
+        <picture_url><![CDATA[http://s3.amazonaws.com/assets.stagingmg.com/property_images/1483/2969/living.jpg]]></picture_url>
+      </picture>
+      <picture>
+        <picture_url><![CDATA[http://s3.amazonaws.com/assets.stagingmg.com/property_images/1483/2971/patio.jpg]]></picture_url>
+      </picture>
+      <picture>
+        <picture_url><![CDATA[http://s3.amazonaws.com/assets.stagingmg.com/property_images/1483/2967/kitchen.jpg]]></picture_url>
+      </picture>
+    </pictures>
+    <date><![CDATA[02/02/2017]]></date>
+    <time><![CDATA[22:13]]></time>
+  </ad>
+
+  <ad>
+    <property_type><![CDATA[Departamento]]></property_type>
+    <id><![CDATA[1486s]]></id>
+    <url><![CDATA[https://www.stagingeb.com/mx/inmueble/test-condesa?utm_source=Trovit]]></url>
+    <title><![CDATA[Departamento con Aloja 4, 1 baño en Condesa, Cuauhtémoc, Ciudad de México, México]]></title>
+    <content><![CDATA[EasyBroker ID: 1486. Departamento en México, Cuauhtemoc, Condesa. It's a long term l.]]></content>
+    <type><![CDATA[For sale]]></type>
+    <agency><![CDATA[Real Estate Rockstars]]></agency>
+    <price currency="MXN"><![CDATA[5000000.0]]></price>
+    <floor_area unit="meters"><![CDATA[3]]></floor_area>
+    <plot_area unit="meters"><![CDATA[40000]]></plot_area>
+    <bathrooms><![CDATA[1]]></bathrooms>
+    <city><![CDATA[Cuauhtémoc]]></city>
+    <city_area><![CDATA[Condesa]]></city_area>
+    <region><![CDATA[Ciudad de México]]></region>
+    <longitude><![CDATA[-99.1840123]]></longitude>
+    <latitude><![CDATA[19.3875393]]></latitude>
+    <address><![CDATA[Jump Street]]></address>
+    <pictures>
+      <picture>
+        <picture_url><![CDATA[http://s3.amazonaws.com/assets.stagingmg.com/property_images/1486/4901/1486.jpg?1444841730]]></picture_url>
+      </picture>
+      <picture>
+        <picture_url><![CDATA[http://s3.amazonaws.com/assets.stagingmg.com/property_images/1486/4903/1486.jpg?1444841730]]></picture_url>
+      </picture>
+      <picture>
+        <picture_url><![CDATA[http://s3.amazonaws.com/assets.stagingmg.com/property_images/1486/4905/1486.jpg?1444841730]]></picture_url>
+      </picture>
+    </pictures>
+    <date><![CDATA[02/02/2017]]></date>
+    <time><![CDATA[22:13]]></time>
+  </ad>
+</trovit>

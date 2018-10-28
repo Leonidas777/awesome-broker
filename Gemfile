@@ -18,6 +18,8 @@ gem 'activerecord-import'
 
 group :development, :test do
   gem 'pry-rails'
+  gem 'factory_bot_rails'
+  gem 'ffaker'
 end
 
 group :development do
@@ -28,4 +30,6 @@ end
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  gem 'shoulda-matchers'
 end
