@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2018_10_27_141825) do
     t.string "name", null: false
     t.text "description"
     t.string "preview_url"
+    t.string "provider"
     t.boolean "published", default: true
     t.string "external_id"
     t.string "property_type"
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 2018_10_27_141825) do
     t.integer "rooms", default: 0
     t.integer "bathrooms", default: 0
     t.string "city"
+    t.datetime "synchronized_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["external_id"], name: "index_properties_on_external_id", unique: true

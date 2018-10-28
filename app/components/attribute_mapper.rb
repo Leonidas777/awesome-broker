@@ -31,7 +31,7 @@ module AttributeMapper
   end
 
   def transform_property_from_trovit(attributes)
-    transform_property(attributes, TROVIT_MAPPING, PROPERTY_ATTRIBUTES)
+    transform_property(attributes, TROVIT_MAPPING, PROPERTY_ATTRIBUTES.merge(provider: 'trovit'))
   end
 
   def transform_property(source, mappings, slices)

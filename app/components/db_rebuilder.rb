@@ -11,7 +11,16 @@ class DBRebuilder
   end
 
   def run
+    sync_start_time = DateTime.now
+
     ReaderParser.run(source: @source, provider: @provider, node_handler: ->(node, provider) { NodeHandler.new(node, provider).process })
+    unpublish_irrelevant(sync_start_time, @provider)
+  end
+
+  private
+
+  def unpublish_irrelevant(sync_start_time, provider)
+    Property.where('synchronized_at < ? AND provider = ?', sync_start_time, provider).update_all(published: false)
   end
 end
 
