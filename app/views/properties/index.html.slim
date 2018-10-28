@@ -15,7 +15,7 @@ section.listings-content-wrapper.section-padding-100
                 .tag
                   span For Sale
                 .list-price
-                  p $945 679
+                  p= "$#{property.price}"
               .property-content
                 h5= property.name
                 p.location
@@ -25,15 +25,14 @@ section.listings-content-wrapper.section-padding-100
                 .property-meta-data.d-flex.align-items-end.justify-content-between
                   .new-tag
                     = image_tag 'south/icons/new.png'
-                  .bathroom
-                    = image_tag 'south/icons/bathtub.png'
-                    span 2
-                  .garage
-                    = image_tag 'south/icons/garage.png'
-                    span 2
-                  .space
-                    = image_tag 'south/icons/space.png'
-                    span 120 sq ft
+                  - if property.bathrooms > 0
+                    .bathroom
+                      = image_tag 'south/icons/bathtub.png'
+                      span= property.bathrooms
+                  - if property.floor_area > 0
+                    .space
+                      = image_tag 'south/icons/space.png'
+                      span= "#{property.floor_area} m"
 
     .row
       .col-12

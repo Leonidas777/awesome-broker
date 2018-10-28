@@ -1,4 +1,6 @@
 class DBRebuilder
+  extend ClassMethods
+
   def self.run(*args)
     new(*args).run
   end
@@ -9,64 +11,17 @@ class DBRebuilder
   end
 
   def run
-    Nokogiri::XML::Reader(File.open(@source)).each do |node|
-      if node.name == 'ad' && node.node_type == Nokogiri::XML::Reader::TYPE_ELEMENT
-        NodeHandler.new(
-          Nokogiri::XML(node.outer_xml).at('./ad'), @provider
-        ).process
-      end
-    end
+    ReaderParser.run(source: @source, provider: @provider, node_handler: ->(node, provider) { NodeHandler.new(node, provider).process })
   end
 end
 
 class NodeHandler < Struct.new(:node, :provider)
-  TROVIT_MAPPING =
-    {
-      property_type: :property_type,
-      id: :provider_id,
-      url: :url,
-      title: :name,
-      content: :description,
-      type: :type,
-      agency: :agency,
-      price: :price,
-      { price: :currency } => :currency,
-      floor_area: :meters,
-      rooms: :rooms,
-      bathrooms: :bathrooms,
-      city: :city,
-      city_area: :city_area,
-      region: :region,
-      longitude: :longitude,
-      latitude: :longitude
-    }
-
   def process
-    mapping =
-      case provider
-      when 'trovit' then TROVIT_MAPPING
-      end
+    attributes = node.elements.map { |element| [element.name.to_sym, element.text.presence] }.to_h
 
-    raise 'Provider is not supported' unless mapping.present?
-
-    mapping.each do |initial_name, column_name|
-      if initial_name.is_a?(Hash)
-        initial_name.each do |node_name, attribute|
-          property = node.at("./#{node_name}")
-
-          puts "#{initial_name}: #{property.try(:[], attribute.to_s)}"
-        end
-
-        next
-      end
-
-      property = node.at("./#{initial_name}")
-
-      puts "#{initial_name}: #{property.try(:inner_html)}"
+    case provider
+    when 'trovit' then DBRebuilder::sync_from_trovit(attributes)
+    else raise 'Provider is not supported.'
     end
-
-    puts '======================================================'
   end
 end
-
-

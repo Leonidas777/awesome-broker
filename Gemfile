@@ -14,6 +14,7 @@ gem 'slim'
 gem 'envyable', require: 'envyable/rails-now'
 gem 'kaminari'
 gem 'nokogiri'
+gem 'activerecord-import'
 
 group :development, :test do
   gem 'pry-rails'

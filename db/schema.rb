@@ -19,9 +19,18 @@ ActiveRecord::Schema.define(version: 2018_10_27_141825) do
     t.string "name", null: false
     t.text "description"
     t.string "preview_url"
-    t.boolean "published", default: false
+    t.boolean "published", default: true
+    t.string "external_id"
+    t.string "property_type"
+    t.string "external_url"
+    t.float "price", default: 0.0
+    t.float "floor_area", default: 0.0
+    t.integer "rooms", default: 0
+    t.integer "bathrooms", default: 0
+    t.string "city"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["external_id"], name: "index_properties_on_external_id", unique: true
   end
 
 end
