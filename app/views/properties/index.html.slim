@@ -11,7 +11,7 @@ section.listings-content-wrapper.section-padding-100
           .col-12.col-md-6.col-xl-4
             .single-featured-property.mb-50
               .property-thumb
-                = image_tag 'south/bg-img/feature1.jpg'
+                = image_tag asset_path('south/bg-img/feature1.jpg')
                 .tag
                   span For Sale
                 .list-price
@@ -19,19 +19,19 @@ section.listings-content-wrapper.section-padding-100
               .property-content
                 h5= property.name
                 p.location
-                  = image_tag 'south/icons/location.png'
+                  = image_tag asset_path('south/icons/location.png')
                   | Upper Road 3411, no.34 CA
                 p=  property.description
                 .property-meta-data.d-flex.align-items-end.justify-content-between
                   .new-tag
-                    = image_tag 'south/icons/new.png'
+                    = image_tag asset_path('south/icons/new.png')
                   - if property.bathrooms > 0
                     .bathroom
-                      = image_tag 'south/icons/bathtub.png'
+                      = image_tag asset_path('south/icons/bathtub.png')
                       span= property.bathrooms
                   - if property.floor_area > 0
                     .space
-                      = image_tag 'south/icons/space.png'
+                      = image_tag asset_path('south/icons/space.png')
                       span= "#{property.floor_area} m"
 
     .row
