@@ -1,24 +1,36 @@
-# README
+# AwesomeBroker: *the real estate platform of your dream*
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Requirements:
+------------------
+* Ruby 2.5.3
+    
+* PostgreSQL > 9.4
 
-Things you may want to cover:
+How to run the app
+------------------
+Prepare a database:
 
-* Ruby version
+    rake db:create
 
-* System dependencies
+    rake db:migrate
 
-* Configuration
+To pull the properties out of the Trovit's feed run:
 
-* Database creation
+    rake synchronize_properties:trovit
 
-* Database initialization
+Run the server:
 
-* How to run the test suite
+    rails s
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+Running in a Docker container
+-----------------------------
+The app is dockerized so you can run it in a container:
 
-* ...
+    docker-compose build
+
+    docker-compose up
+
+and by default it will be available on your local machine at `localhost:3000`
+
+To deploy the app to production customize `docker-compose.yml`.
