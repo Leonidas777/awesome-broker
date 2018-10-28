@@ -4,6 +4,11 @@ ENV RAILS_ENV production
 ENV RAILS_SERVE_STATIC_FILES true
 ENV DATABASE_URL 'postgres://postgres:@db/awesome_broker'
 
+RUN apt-get update && apt-get -y install cron
+ADD crontab /etc/cron.d/sync-cron
+RUN chmod 0644 /etc/cron.d/sync-cron && touch /var/log/cron.log
+CMD cron && tail -f /var/log/cron.log
+
 ENV NODE_VERSION 6.6.0
 RUN \
   curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz" \
