@@ -17,22 +17,22 @@ section.listings-content-wrapper.section-padding-100
                 .list-price
                   p= "$#{property.price.round}"
               .property-content
-                h5= property.name
+                h5= property.name.html_safe
                 p.location
                   = image_tag asset_path('south/icons/location.png')
                   | Upper Road 3411, no.34 CA
-                p=  property.description
+                p=  property.description.html_safe
                 .property-meta-data.d-flex.align-items-end.justify-content-between
-                  .new-tag
-                    = image_tag asset_path('south/icons/new.png')
-                  - if property.bathrooms > 0
-                    .bathroom
-                      = image_tag asset_path('south/icons/bathtub.png')
-                      span= property.bathrooms
-                  - if property.floor_area > 0
-                    .space
-                      = image_tag asset_path('south/icons/space.png')
-                      span= "#{property.floor_area} m"
+                  .space
+                    = image_tag asset_path('south/icons/space.png')
+                    span= "#{property.floor_area} m"
+                  .flat
+                    = image_tag asset_path('south/icons/flat.png')
+                    span= property.rooms
+                  .bathroom
+                    = image_tag asset_path('south/icons/bathtub.png')
+                    span= property.bathrooms
+
 
     .row
       .col-12
