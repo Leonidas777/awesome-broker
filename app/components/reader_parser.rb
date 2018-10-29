@@ -14,10 +14,8 @@ class ReaderParser
 
     Nokogiri::XML::Reader(File.open(@source)).each do |node|
       if node.name == target_node && node.node_type == Nokogiri::XML::Reader::TYPE_ELEMENT
-        @node_handler.call(Nokogiri::XML(node.outer_xml).at("./#{target_node}"), @provider)
-        # @node_handler_class.new(
-        #   Nokogiri::XML(node.outer_xml).at("./#{target_node}"), @provider
-        # ).process
+        current_node = Nokogiri::XML(node.outer_xml).at("./#{target_node}")
+        @node_handler.call(current_node, @provider)
       end
     end
   end
