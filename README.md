@@ -31,6 +31,7 @@ The app is dockerized so you can run it in a container:
 
     docker-compose up
 
-and by default it will be available on your local machine at `localhost:3000`
+and by default it will be available on your local machine at `localhost:3000`.
+There is also a cron set up to launch the script of updating the feed every 8 hours in there.
 
 To deploy the app to production customize `docker-compose.yml`.
