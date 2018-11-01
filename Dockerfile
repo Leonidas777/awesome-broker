@@ -1,7 +1,6 @@
 FROM ruby:2.5.3
 
 ENV RAILS_ENV production
-ENV RAILS_SERVE_STATIC_FILES true
 ENV DATABASE_URL 'postgres://postgres:@db/awesome_broker'
 
 RUN apt-get update && apt-get -y install cron
@@ -18,7 +17,7 @@ RUN \
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs \
   && rm node-v$NODE_VERSION-linux-x64.tar.xz
 
-RUN mkdir /app
+RUN mkdir -p /app
 WORKDIR /app
 
 COPY Gemfile /app/Gemfile
